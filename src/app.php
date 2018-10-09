@@ -78,7 +78,7 @@ $app['bookshelf.model'] = function ($app) {
             $postgres_dsn = Sql::getPostgresDsn(
                 $config['cloudsql_database_name'],
                 $config['cloudsql_port'],
-                getenv('GAE_INSTANCE') ? $config['cloudsql_connection_name'] : null
+                getenv('GAE_INSTANCE') ? $config['cloudsql_connection_name'] : $config['cloudsql_connection_name']
             );
             return new Sql(
                 $postgres_dsn,
@@ -90,6 +90,8 @@ $app['bookshelf.model'] = function ($app) {
                 . "Possible values are mysql, postgres, mongodb, or datastore.");
     }
 };
+
+var_dump($app['bookshelf.model']);
 
 // Turn on debug locally
 if (in_array(@$_SERVER['REMOTE_ADDR'], ['127.0.0.1', 'fe80::1', '::1'])

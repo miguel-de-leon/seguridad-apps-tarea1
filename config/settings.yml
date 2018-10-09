@@ -1,0 +1,19 @@
+# Google credentials and configuration
+google_client_id:      YOUR_CLIENT_ID
+google_client_secret:  YOUR_CLIENT_SECRET
+google_project_id:     YOUR_PROJECT_ID
+
+# options are "mysql", "postgres", "mongodb", or "datastore"
+bookshelf_backend: postgres
+
+# configure CloudSQL for MySQL or PostgreSQL backend
+cloudsql_connection_name: 35.236.87.186
+cloudsql_database_name: proyectoumg
+cloudsql_user: phpuser
+cloudsql_password: hol4hol4
+cloudsql_port: 5432
+
+# configure Mongo backend
+mongo_url: YOUR_MONGODB_URL
+mongo_database: YOUR_MONGO_DATABASE
+mongo_collection: YOUR_MONGO_COLLECTION
